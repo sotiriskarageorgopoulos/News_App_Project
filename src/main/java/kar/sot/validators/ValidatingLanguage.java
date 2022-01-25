@@ -2,9 +2,7 @@ package kar.sot.validators;
 
 import java.util.Arrays;
 import java.util.Optional;
-
 import kar.sot.util.interfaces.ValidatingInterface;
-
 import java.util.List;
 
 public class ValidatingLanguage implements ValidatingInterface<String> {

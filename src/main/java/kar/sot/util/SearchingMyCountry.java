@@ -1,4 +1,4 @@
-package kar.sot.searching;
+package kar.sot.util;
 
 import java.io.IOException;
 import java.net.URI;
@@ -9,12 +9,9 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 import com.google.gson.GsonBuilder;
 
-import kar.sot.util.Country;
-
 public class SearchingMyCountry {
 
-	SearchingMyCountry() {
-	}
+	public SearchingMyCountry() {}
 
 	/**
 	 * Find user's country
@@ -24,7 +21,7 @@ public class SearchingMyCountry {
 	 * @throws InterruptedException
 	 * @return user's country
 	 */
-	Country searchMyCountry() throws IOException, InterruptedException {
+	public Country searchMyCountry() throws IOException, InterruptedException {
 		HttpClient client = HttpClient.newHttpClient();
 
 		HttpRequest requestCountry = HttpRequest.newBuilder().uri(URI.create("http://ip-api.com/json/?fields=61439"))

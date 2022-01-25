@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="kar.sot.test.SearchingByUserCountryTest" time="0.776" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="kar.sot.test.NewsServiceTest" time="8.888" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.11\bin"/>
-    <property name="sun.java.command" value="C:\Users\sotir\AppData\Local\Temp\surefire18189283760431922731\surefirebooter6627022365411683000.jar C:\Users\sotir\AppData\Local\Temp\surefire18189283760431922731 2022-01-09T19-21-47_023-jvmRun1 surefire14295725328473253151tmp surefire_012935900094653007309tmp"/>
+    <property name="sun.java.command" value="C:\Users\sotir\AppData\Local\Temp\surefire11951187812788417520\surefirebooter10966250458349995080.jar C:\Users\sotir\AppData\Local\Temp\surefire11951187812788417520 2022-01-25T12-55-09_195-jvmRun1 surefire13424958000519429261tmp surefire_017847861535895873574tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\sotir\eclipse-workspace\news_api\target\test-classes;C:\Users\sotir\eclipse-workspace\news_api\target\classes;C:\Users\sotir\.m2\repository\org\slf4j\slf4j-simple\1.7.26\slf4j-simple-1.7.26.jar;C:\Users\sotir\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\sotir\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sotir\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\sotir\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\sotir\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\sotir\AppData\Local\Temp\surefire18189283760431922731\surefirebooter6627022365411683000.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sotir\AppData\Local\Temp\surefire11951187812788417520\surefirebooter10966250458349995080.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.11+9-LTS-194"/>
@@ -53,12 +53,25 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Eclipse Adoptium/jdk-17.0.1.12-hotspot/bin/server;C:/Program Files/Eclipse Adoptium/jdk-17.0.1.12-hotspot/bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\gradle-7.0.2\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\apache-maven-3.8.4\bin;C:\Users\sotir\AppData\Local\ValidatorBuddy;C:\Users\sotir\AppData\Local\Microsoft\WindowsApps;C:\Users\sotir\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\sotir\AppData\Roaming\npm;C:\Users\sotir\.dotnet\tools;C:\Users\sotir\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Windows\system32;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\gradle-7.0.2\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\apache-maven-3.8.4\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\sotir\AppData\Local\ValidatorBuddy;C:\Users\sotir\AppData\Local\Microsoft\WindowsApps;C:\Users\sotir\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\sotir\AppData\Roaming\npm;C:\Users\sotir\.dotnet\tools;C:\Users\sotir\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;."/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vm.version" value="11.0.11+9-LTS-194"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="getArticlesByCountries" classname="kar.sot.test.SearchingByUserCountryTest" time="0.775"/>
+  <testcase name="getArticlesWithInvalidTimePeriod" classname="kar.sot.test.NewsServiceTest" time="0.103"/>
+  <testcase name="getArticlesWithValidTimePeriod" classname="kar.sot.test.NewsServiceTest" time="2.182"/>
+  <testcase name="getArticlesWithSupportedLanguage" classname="kar.sot.test.NewsServiceTest" time="0.837"/>
+  <testcase name="getArticlesWithSupportedCountry" classname="kar.sot.test.NewsServiceTest" time="0.772"/>
+  <testcase name="getArticlesWithExistingTerm" classname="kar.sot.test.NewsServiceTest" time="0.552"/>
+  <testcase name="getArticlesWithUnSupportedLanguage" classname="kar.sot.test.NewsServiceTest" time="0.002"/>
+  <testcase name="getArticlesWithUnSupportedCountry" classname="kar.sot.test.NewsServiceTest" time="0.005"/>
+  <testcase name="getArticlesWithExistingSource" classname="kar.sot.test.NewsServiceTest" time="0.313"/>
+  <testcase name="getArticlesWithNotExistingTerm" classname="kar.sot.test.NewsServiceTest" time="0.623"/>
+  <testcase name="getArticlesByCountries" classname="kar.sot.test.NewsServiceTest" time="1.035"/>
+  <testcase name="getArticlesWithNotExistingSource" classname="kar.sot.test.NewsServiceTest" time="0.643"/>
+  <testcase name="getArticlesWithSupportedCategory" classname="kar.sot.test.NewsServiceTest" time="1.295"/>
+  <testcase name="getArticlesWithUnSupportedCategory" classname="kar.sot.test.NewsServiceTest" time="0.003"/>
+  <testcase name="getArticlesWithNotExistingTitle" classname="kar.sot.test.NewsServiceTest" time="0.404"/>
 </testsuite>
