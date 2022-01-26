@@ -1,0 +1,143 @@
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(223, 25%, 28%);
+    --clr-primary-2: hsl(223, 30%, 38%);
+    --clr-primary-3: hsl(223, 40%, 48%);
+    --clr-primary-4: hsl(223, 50%, 58%);
+    /* primary/main color */
+    --clr-primary-5: hsl(223, 90%, 61%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(223, 62%, 60%);
+    --clr-primary-7: hsl(223, 65%, 70%);
+    --clr-primary-8: hsl(223, 75%, 80%);
+    --clr-primary-9: hsl(223, 85%, 80%);
+    --clr-primary-10: hsl(223, 85%, 96%);
+    /* darkest grey for headings*/
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-gold: #c59d5f;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --small-font-size: 14px;
+    --medium-font-size: 18px;
+    --big-font-size: 30px;
+    --x-big-font-size: 40px;
+    --xx-big-font-size: 60px;
+}
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 10%;
+}
+
+.input-style,
+.select-input {
+    width: 100%;
+    border: 2px solid var(--clr-primary-3);
+    outline: 2px solid var(--clr-primary-5);
+    color: var(--clr-primary-3);
+}
+
+.input-label,
+.select-label {
+    color: var(--clr-primary-3);
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+}
+
+.btn-submit {
+    background-color: var(--clr-primary-3) !important;
+    color: var(--clr-primary-10) !important;
+    width: 50%;
+}
+
+.footer-container {
+    padding: 2%;
+    margin-top: 10%;
+    background-color: var(--clr-primary-5);
+    color: var(--clr-primary-10)
+}
+
+.footer-link {
+    color: var(--clr-primary-10);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--clr-primary-10);
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: var(--big-font-size);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bi-facebook,
+.bi-instagram,
+.bi-twitter {
+    color: var(--clr-primary-10);
+}
+
+
+nav {
+    background-color: var(--clr-primary-5);
+    padding: 2%;
+}
+
+.nav-link {
+    color: var(--clr-primary-10) !important;
+    font-size: var(--medium-font-size);
+}
+
+.card {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-headlines {
+    color: var(--clr-primary-3);
+    text-align: center;
+}
+
+.search-title-history {
+    color: var(--clr-primary-3);
+    text-align: center;
+}
+
+.search-title {
+    color: var(--clr-primary-3);
+    margin-left: auto;
+    margin-right: auto;
+}
+
