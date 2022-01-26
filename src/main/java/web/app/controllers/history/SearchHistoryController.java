@@ -11,8 +11,8 @@ public class SearchHistoryController {
 		List<SearchHistory> history = ctx.sessionAttribute("history");
 		page.articles = null;
 		if (history != null) {
-			SearchHistoryDAO sh = new SearchHistoryDAO();
-			page.history = sh.getFiveRecentSearches(history);
+			SearchHistoryDAO shd = new SearchHistoryDAO();
+			page.history = shd.getFiveRecentSearches(history);
 		}
 		page.render();
 	};
@@ -22,8 +22,8 @@ public class SearchHistoryController {
 		List<SearchHistory> history = ctx.sessionAttribute("history");
 		String id = ctx.formParam("id");
 		if (history != null) {
-			page.articles = history.stream().filter(h -> h.getId().equals(id)).map(SearchHistory::getArticles)
-					.findFirst().get();
+			SearchHistoryDAO shd = new SearchHistoryDAO();
+			page.articles = shd.getArticles(history, id);
 		}
 		page.render();
 	};

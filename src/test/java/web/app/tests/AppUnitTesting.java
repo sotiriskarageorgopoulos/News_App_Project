@@ -3,6 +3,7 @@ package web.app.tests;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.sameInstance;
 
 import java.time.*;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import kar.sot.util.Article;
 import kar.sot.validators.SupportedISOCodes;
 import kar.sot.validators.SupportedISOLanguages;
 import web.app.controllers.history.SearchHistory;
@@ -54,5 +56,22 @@ public class AppUnitTesting {
 		// To show history objects in descending order
 		recentSearches.stream().forEach(s -> System.out.println(s.getDateTime().toString()));
 	}
-
+	
+	@Test
+	public void getArticlesByHistory() {
+		SearchHistoryDAO shd = new SearchHistoryDAO();
+		List<SearchHistory> history = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			List<Article> articles = new ArrayList<>();
+			SearchHistory sh = new SearchHistory("stg", LocalDateTime.now().plusDays(Math.round(Math.random() * 10)),
+					articles);
+			history.add(sh);
+		}
+		String id = history.get(0).getId();
+		List<Article> articles = history.get(0).getArticles();
+		
+		List<Article> searchedArticles = shd.getArticles(history, id);
+		
+		assertThat("must be same by reference...",articles,sameInstance(searchedArticles));
+	}
 }
