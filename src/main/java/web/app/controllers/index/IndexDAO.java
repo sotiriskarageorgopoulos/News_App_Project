@@ -13,24 +13,23 @@ import kar.sot.services.NewsServiceAPI;
 
 public class IndexDAO {
 	private List<Article> articles;
-	
+
 	public List<Article> getAllTopHeadingsByUserCountry() {
 		try {
 			NewsServiceAPI n = NewsAPI.getNewsService();
 			articles = n.searchByUserCountry();
-		} catch(SearchingError e) {
+		} catch (SearchingError e) {
 			e.printStackTrace();
 		}
 		return articles;
 	}
-	
+
 	public List<SupportedISOCodes> getSupportedCountries() {
-		return Arrays.asList(SupportedISOCodes.values());			
+		return Arrays.asList(SupportedISOCodes.values());
 	}
-	
+
 	public List<String> getSupportedCategories() {
-		return Arrays.stream(SupportedNewsCategories.values())
-					 .map(SupportedNewsCategories::getCategory)
-					 .collect(Collectors.toList());
+		return Arrays.stream(SupportedNewsCategories.values()).map(SupportedNewsCategories::getCategory)
+				.collect(Collectors.toList());
 	}
 }

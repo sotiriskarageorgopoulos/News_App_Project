@@ -71,7 +71,7 @@
         <div class="row mt-5">
             @if(page.articles != null)
             	 @for(Article article : page.articles)
-			        <div class="col-sm-4">
+			        <div class="col-sm-4 mt-3">
 			            <div class="card">
 			            	@if(article.getUrlToImage() != null)
 			                	<img src="${article.getUrlToImage()}" class="card-img-top" alt="${article.getTitle()}">
@@ -81,9 +81,11 @@
 			                    <p class="card-text">${article.getDescription()}</p>
 			                    <a href="${article.getUrl()}" class="btn btn-primary">See more...</a>
 			                </div>
-			                <div class="card-footer text-muted">
-			                  ${article.getPublishedAt() != null? "Published:\t"+article.getPublishedAt().toString(): ""}
-			                </div>
+			                @if(article.getPublishedAt() != null)
+				                <div class="card-footer text-muted">
+				                  ${article.getPublishedAt().toString()}
+				                </div>
+				            @endif
 			            </div>
 			        </div>
 			     @endfor

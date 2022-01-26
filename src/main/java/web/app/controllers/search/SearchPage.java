@@ -19,12 +19,12 @@ public class SearchPage {
 	private SearchDAO s = new SearchDAO();
 	public List<SupportedISOLanguages> langs = s.getAllSupportedLanguages();
 	public List<String> categories = s.getSupportedCategories();
-	
+
 	public SearchPage(Context ctx) {
 		this.ctx = ctx;
 	}
 
 	public void render() {
-		ctx.render("search/search.jte",Collections.singletonMap("page",this));
+		ctx.render("search/search.jte", Collections.singletonMap("page", this));
 	}
 }

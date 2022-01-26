@@ -10,16 +10,14 @@ import java.util.stream.Collectors;
 
 public class SearchDAO {
 	private List<Article> articles = null;
-	
-	
+
 	public List<SupportedISOLanguages> getAllSupportedLanguages() {
 		return Arrays.asList(SupportedISOLanguages.values());
 	}
-	
+
 	public List<String> getSupportedCategories() {
-		return Arrays.stream(SupportedNewsCategories.values())
-				 .map(SupportedNewsCategories::getCategory)
-				 .collect(Collectors.toList());
+		return Arrays.stream(SupportedNewsCategories.values()).map(SupportedNewsCategories::getCategory)
+				.collect(Collectors.toList());
 	}
 
 }

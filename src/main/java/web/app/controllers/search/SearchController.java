@@ -9,7 +9,6 @@ import web.app.controllers.history.SearchHistory;
 import web.app.util.SessionData;
 
 import java.time.*;
-import java.util.Arrays;
 
 public class SearchController {
 
@@ -42,16 +41,11 @@ public class SearchController {
 			try {
 				NewsServiceAPI n = NewsAPI.getNewsService();
 				SearchPage page = new SearchPage(ctx);
-				String desc = "News on " + lang + " language searched.";
+				String desc = "News in " + lang + " language searched.";
 				page.articles = n.searchByLang(lang);
 				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(), page.articles);
-				SessionData.history = ctx.sessionAttribute("history");
-				if (SessionData.history == null) {
-					ctx.sessionAttribute("history", Arrays.asList(h));
-				} else {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", SessionData.history);
-				}
+				SessionData.history.add(h);
+				ctx.sessionAttribute("history", SessionData.history);
 				page.render();
 			} catch (SearchingError e) {
 				e.printStackTrace();
@@ -68,13 +62,8 @@ public class SearchController {
 				String desc = "The term " + term + " searched.";
 				page.articles = n.searchByTerm(term);
 				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(), page.articles);
-				if (SessionData.history == null) {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", Arrays.asList(h));
-				} else {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", SessionData.history);
-				}
+				SessionData.history.add(h);
+				ctx.sessionAttribute("history", SessionData.history);
 				page.render();
 			} catch (SearchingError e) {
 				e.printStackTrace();
@@ -91,13 +80,8 @@ public class SearchController {
 				String desc = "Category " + category + " searched.";
 				page.articles = n.searchByCategory(category);
 				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(), page.articles);
-				if (SessionData.history == null) {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", Arrays.asList(h));
-				} else {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", SessionData.history);
-				}
+				SessionData.history.add(h);
+				ctx.sessionAttribute("history", SessionData.history);
 				page.render();
 			} catch (SearchingError e) {
 				e.printStackTrace();
@@ -114,17 +98,13 @@ public class SearchController {
 			if (term != null && fromDate != null && toDate != null) {
 				NewsServiceAPI n = NewsAPI.getNewsService();
 				SearchPage page = new SearchPage(ctx);
-				String desc = "News was searched between " + fromDate.substring(0,10) + " and " + toDate.substring(0,10);
+				String desc = "News was searched between " + fromDate.substring(0, 10) + " and "
+						+ toDate.substring(0, 10);
 				page.articles = n.searchByTimePeriod(LocalDate.parse(fromDate.substring(0, 10)),
 						LocalDate.parse(toDate.substring(0, 10)), term);
 				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(), page.articles);
-				if (SessionData.history == null) {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", Arrays.asList(h));
-				} else {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", SessionData.history);
-				}
+				SessionData.history.add(h);
+				ctx.sessionAttribute("history", SessionData.history);
 				page.render();
 			}
 		} catch (SearchingError e) {

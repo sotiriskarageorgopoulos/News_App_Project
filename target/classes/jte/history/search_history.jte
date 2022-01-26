@@ -18,7 +18,8 @@
 	                <li class="list-group-item">
 	                    <form method="POST" action="/fetch_from_history" class="form">
 	                        <p>${h.getDesc()}</p>
-	                        <p>Date: ${h.getDateTime().toString().substring(0,10)} Time: ${h.getDateTime().toString().substring(11,16)}</p>
+	                        <p><i class="bi bi-calendar"></i> ${h.getDateTime().toString().substring(0,10)}</p>
+	                        <p><i class="bi bi-clock"></i> ${h.getDateTime().toString().substring(11,16)}</p>
 	                        <input type="hidden" name="id" value="${h.getId()}" />
 	                        <div class="text-center">
 	                            <button type="submit" class="btn btn-sm btn-submit">Search</button>
@@ -35,7 +36,7 @@
        <div class="container-fluid">
            <div class="row">
             @for(var article : page.articles)
-		        <div class="col-sm-4">
+		        <div class="col-sm-4 mt-3">
 		            <div class="card">
 		            	@if(article.getUrlToImage() != null)
 		                	<img src="${article.getUrlToImage()}" class="card-img-top" alt="${article.getTitle()}">
@@ -45,9 +46,11 @@
 		                    <p class="card-text">${article.getDescription()}</p>
 		                    <a href="${article.getUrl()}" class="btn btn-primary">See more...</a>
 		                </div>
-		                <div class="card-footer text-muted">
-		                  ${article.getPublishedAt() != null? "Published:\t"+article.getPublishedAt().toString(): ""}
-		                </div>
+		                @if(article.getPublishedAt() != null)
+			                <div class="card-footer text-muted">
+			                  ${article.getPublishedAt().toString()}
+			                </div>
+			            @endif
 		            </div>
 		        </div>
 		    @endfor

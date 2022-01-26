@@ -11,14 +11,12 @@ public class SearchHistory {
 	private final String id = UUID.randomUUID().toString();
 	private LocalDateTime dateTime;
 	private List<Article> articles;
-	
 
 	public SearchHistory(String desc, LocalDateTime dateTime, List<Article> articles) {
 		this.desc = desc;
 		this.dateTime = dateTime;
 		this.articles = articles;
 	}
-
 
 	public String getId() {
 		return id;

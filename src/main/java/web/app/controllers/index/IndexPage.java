@@ -15,12 +15,12 @@ public class IndexPage {
 	public List<Article> allTopHeadings = i.getAllTopHeadingsByUserCountry();
 	public List<SupportedISOCodes> allCountries = i.getSupportedCountries();
 	public List<String> allCategories = i.getSupportedCategories();
-	
+
 	public IndexPage(Context ctx) {
 		this.ctx = ctx;
 	}
-	
+
 	public void render() {
-		ctx.render("index/index.jte",Collections.singletonMap("page", this));
+		ctx.render("index/index.jte", Collections.singletonMap("page", this));
 	}
 }

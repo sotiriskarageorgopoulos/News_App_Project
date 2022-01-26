@@ -1,7 +1,6 @@
 package web.app.controllers.index;
 
 import java.time.*;
-import java.util.Arrays;
 
 import io.javalin.http.Handler;
 import kar.sot.NewsAPI;
@@ -25,14 +24,9 @@ public class IndexController {
 				IndexPage page = new IndexPage(ctx);
 				String desc = "The " + country + " searched.";
 				page.allTopHeadings = n.searchByCountry(country);
-				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(),page.allTopHeadings);
-				if (SessionData.history == null) {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", Arrays.asList(h));
-				} else {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", SessionData.history);
-				}
+				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(), page.allTopHeadings);
+				SessionData.history.add(h);
+				ctx.sessionAttribute("history", SessionData.history);
 				page.render();
 			} catch (SearchingError e) {
 				e.printStackTrace();
@@ -49,14 +43,9 @@ public class IndexController {
 				IndexPage page = new IndexPage(ctx);
 				String desc = "The " + category + " searched.";
 				page.allTopHeadings = n.searchByCountryAndCategory(category);
-				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(),page.allTopHeadings);
-				if (SessionData.history == null) {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", Arrays.asList(h));
-				} else {
-					SessionData.history.add(h);
-					ctx.sessionAttribute("history", SessionData.history);
-				}
+				SearchHistory h = new SearchHistory(desc, LocalDateTime.now(), page.allTopHeadings);
+				SessionData.history.add(h);
+				ctx.sessionAttribute("history", SessionData.history);
 				page.render();
 			} catch (SearchingError ex) {
 				ex.printStackTrace();

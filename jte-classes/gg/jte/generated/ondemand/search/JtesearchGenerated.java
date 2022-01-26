@@ -3,7 +3,7 @@ import web.app.controllers.search.SearchPage;
 import kar.sot.util.Article;
 public final class JtesearchGenerated {
 	public static final String JTE_NAME = "search/search.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,6,6,6,6,23,23,24,24,24,24,24,24,24,24,24,24,25,25,46,46,47,47,47,47,47,47,47,47,47,47,48,48,71,71,72,72,75,75,76,76,76,76,76,76,76,76,76,76,76,76,76,76,77,77,79,79,79,80,80,80,81,81,81,81,81,81,81,84,84,84,88,88,89,89,92,92,92};
+	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,6,6,6,6,23,23,24,24,24,24,24,24,24,24,24,24,25,25,46,46,47,47,47,47,47,47,47,47,47,47,48,48,71,71,72,72,75,75,76,76,76,76,76,76,76,76,76,76,76,76,76,76,77,77,79,79,79,80,80,80,81,81,81,81,81,81,81,83,83,85,85,85,87,87,90,90,91,91,94,94,94};
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, SearchPage page, Article article) {
 		jteOutput.writeContent("\r\n");
 		gg.jte.generated.ondemand.layout.JtebaseGenerated.render(jteOutput, jteHtmlInterceptor, new gg.jte.html.HtmlContent() {
@@ -40,7 +40,7 @@ public final class JtesearchGenerated {
 				if (page.articles != null) {
 					jteOutput.writeContent("\r\n            \t ");
 					for (Article article : page.articles) {
-						jteOutput.writeContent("\r\n\t\t\t        <div class=\"col-sm-4\">\r\n\t\t\t            <div class=\"card\">\r\n\t\t\t            \t");
+						jteOutput.writeContent("\r\n\t\t\t        <div class=\"col-sm-4 mt-3\">\r\n\t\t\t            <div class=\"card\">\r\n\t\t\t            \t");
 						if (article.getUrlToImage() != null) {
 							jteOutput.writeContent("\r\n\t\t\t                \t<img");
 							if (gg.jte.runtime.TemplateUtils.isAttributeRendered(article.getUrlToImage())) {
@@ -71,10 +71,14 @@ public final class JtesearchGenerated {
 							jteOutput.writeUserContent(article.getUrl());
 							jteOutput.writeContent("\"");
 						}
-						jteOutput.writeContent(" class=\"btn btn-primary\">See more...</a>\r\n\t\t\t                </div>\r\n\t\t\t                <div class=\"card-footer text-muted\">\r\n\t\t\t                  ");
-						jteOutput.setContext("div", null);
-						jteOutput.writeUserContent(article.getPublishedAt() != null? "Published:\t"+article.getPublishedAt().toString(): "");
-						jteOutput.writeContent("\r\n\t\t\t                </div>\r\n\t\t\t            </div>\r\n\t\t\t        </div>\r\n\t\t\t     ");
+						jteOutput.writeContent(" class=\"btn btn-primary\">See more...</a>\r\n\t\t\t                </div>\r\n\t\t\t                ");
+						if (article.getPublishedAt() != null) {
+							jteOutput.writeContent("\r\n\t\t\t\t                <div class=\"card-footer text-muted\">\r\n\t\t\t\t                  ");
+							jteOutput.setContext("div", null);
+							jteOutput.writeUserContent(article.getPublishedAt().toString());
+							jteOutput.writeContent("\r\n\t\t\t\t                </div>\r\n\t\t\t\t            ");
+						}
+						jteOutput.writeContent("\r\n\t\t\t            </div>\r\n\t\t\t        </div>\r\n\t\t\t     ");
 					}
 					jteOutput.writeContent("\r\n            ");
 				}

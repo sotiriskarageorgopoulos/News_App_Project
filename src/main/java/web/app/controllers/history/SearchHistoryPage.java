@@ -12,12 +12,12 @@ public class SearchHistoryPage {
 	protected final Context ctx;
 	public List<SearchHistory> history = null;
 	public List<Article> articles = null;
-	
+
 	public SearchHistoryPage(Context ctx) {
 		this.ctx = ctx;
 	}
 	
 	public void render() {
-		ctx.render("history/search_history.jte",Collections.singletonMap("page", this));
+		ctx.render("history/search_history.jte", Collections.singletonMap("page", this));
 	}
 }
