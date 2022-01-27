@@ -103,7 +103,7 @@ public class NewsServiceTest {
 	@Test
 	public void getArticlesWithExistingSource() throws SearchingError {
 		NewsServiceAPI sbs = NewsAPI.getNewsService();
-		List<Article> articles = sbs.searchBySource("rt");
+		List<Article> articles = sbs.searchBySource("abc-news");
 		assertThat("Must return many articles",articles.size(),greaterThan(0));
 	}
 	

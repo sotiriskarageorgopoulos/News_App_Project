@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="kar.sot.test.NewsServiceTest" time="8.888" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="kar.sot.test.NewsServiceTest" time="6.178" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.11\bin"/>
-    <property name="sun.java.command" value="C:\Users\sotir\AppData\Local\Temp\surefire11951187812788417520\surefirebooter10966250458349995080.jar C:\Users\sotir\AppData\Local\Temp\surefire11951187812788417520 2022-01-25T12-55-09_195-jvmRun1 surefire13424958000519429261tmp surefire_017847861535895873574tmp"/>
+    <property name="sun.java.command" value="C:\Users\sotir\AppData\Local\Temp\surefire5167684730037635620\surefirebooter17829571141396353369.jar C:\Users\sotir\AppData\Local\Temp\surefire5167684730037635620 2022-01-27T18-37-56_075-jvmRun1 surefire9718552134412467240tmp surefire_03659105968145226970tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\sotir\eclipse-workspace\news_api\target\test-classes;C:\Users\sotir\eclipse-workspace\news_api\target\classes;C:\Users\sotir\.m2\repository\org\slf4j\slf4j-simple\1.7.26\slf4j-simple-1.7.26.jar;C:\Users\sotir\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\sotir\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sotir\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\sotir\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\sotir\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\sotir\AppData\Local\Temp\surefire11951187812788417520\surefirebooter10966250458349995080.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sotir\AppData\Local\Temp\surefire5167684730037635620\surefirebooter17829571141396353369.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.11+9-LTS-194"/>
@@ -60,18 +60,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="getArticlesWithInvalidTimePeriod" classname="kar.sot.test.NewsServiceTest" time="0.103"/>
-  <testcase name="getArticlesWithValidTimePeriod" classname="kar.sot.test.NewsServiceTest" time="2.182"/>
-  <testcase name="getArticlesWithSupportedLanguage" classname="kar.sot.test.NewsServiceTest" time="0.837"/>
-  <testcase name="getArticlesWithSupportedCountry" classname="kar.sot.test.NewsServiceTest" time="0.772"/>
-  <testcase name="getArticlesWithExistingTerm" classname="kar.sot.test.NewsServiceTest" time="0.552"/>
+  <testcase name="getArticlesWithInvalidTimePeriod" classname="kar.sot.test.NewsServiceTest" time="0.017"/>
+  <testcase name="getArticlesWithValidTimePeriod" classname="kar.sot.test.NewsServiceTest" time="1.358"/>
+  <testcase name="getArticlesWithSupportedLanguage" classname="kar.sot.test.NewsServiceTest" time="1.412"/>
+  <testcase name="getArticlesWithSupportedCountry" classname="kar.sot.test.NewsServiceTest" time="0.31"/>
+  <testcase name="getArticlesWithExistingTerm" classname="kar.sot.test.NewsServiceTest" time="0.309"/>
   <testcase name="getArticlesWithUnSupportedLanguage" classname="kar.sot.test.NewsServiceTest" time="0.002"/>
   <testcase name="getArticlesWithUnSupportedCountry" classname="kar.sot.test.NewsServiceTest" time="0.005"/>
-  <testcase name="getArticlesWithExistingSource" classname="kar.sot.test.NewsServiceTest" time="0.313"/>
-  <testcase name="getArticlesWithNotExistingTerm" classname="kar.sot.test.NewsServiceTest" time="0.623"/>
-  <testcase name="getArticlesByCountries" classname="kar.sot.test.NewsServiceTest" time="1.035"/>
-  <testcase name="getArticlesWithNotExistingSource" classname="kar.sot.test.NewsServiceTest" time="0.643"/>
-  <testcase name="getArticlesWithSupportedCategory" classname="kar.sot.test.NewsServiceTest" time="1.295"/>
+  <testcase name="getArticlesWithExistingSource" classname="kar.sot.test.NewsServiceTest" time="0.294"/>
+  <testcase name="getArticlesWithNotExistingTerm" classname="kar.sot.test.NewsServiceTest" time="0.281"/>
+  <testcase name="getArticlesByCountries" classname="kar.sot.test.NewsServiceTest" time="0.633"/>
+  <testcase name="getArticlesWithNotExistingSource" classname="kar.sot.test.NewsServiceTest" time="0.584"/>
+  <testcase name="getArticlesWithSupportedCategory" classname="kar.sot.test.NewsServiceTest" time="0.303"/>
   <testcase name="getArticlesWithUnSupportedCategory" classname="kar.sot.test.NewsServiceTest" time="0.003"/>
-  <testcase name="getArticlesWithNotExistingTitle" classname="kar.sot.test.NewsServiceTest" time="0.404"/>
+  <testcase name="getArticlesWithNotExistingTitle" classname="kar.sot.test.NewsServiceTest" time="0.603"/>
 </testsuite>

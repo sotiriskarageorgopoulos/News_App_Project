@@ -268,14 +268,14 @@ public class NewsServiceAPI implements NewsInterface<String, LocalDate> {
 	 * @author Sotirios Karageorgopoulos
 	 * @param dateFrom - the initial date
 	 * @param dateTo   - the final date
-	 * @param title    - the ariticle's title
+	 * @param term - the ariticle's term
 	 * @throws InterruptedException
 	 * @throws IOException
 	 * @throws SearchingError
 	 * @throws DateError
 	 * @return articles list
 	 */
-	public List<Article> searchByTimePeriod(LocalDate dateFrom, LocalDate dateTo, String title)
+	public List<Article> searchByTimePeriod(LocalDate dateFrom, LocalDate dateTo, String term)
 			throws SearchingError, DateError {
 		try {
 			if (!dateFrom.isBefore(dateTo))
@@ -284,7 +284,7 @@ public class NewsServiceAPI implements NewsInterface<String, LocalDate> {
 			HttpClient client = HttpClient.newHttpClient();
 
 			HttpRequest request = HttpRequest.newBuilder()
-					.uri(URI.create("https://newsapi.org/v2/everything?q=" + title + "&from=" + dateFrom.toString()
+					.uri(URI.create("https://newsapi.org/v2/everything?q=" + term + "&from=" + dateFrom.toString()
 							+ "&to=" + dateTo.toString()
 							+ "&sortBy=popularityt&apiKey=e774591c5bef4863acbb636dcb9983ac"))
 					.build();

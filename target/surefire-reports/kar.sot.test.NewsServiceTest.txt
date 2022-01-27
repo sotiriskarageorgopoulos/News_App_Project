@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: kar.sot.test.NewsServiceTest
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.888 s - in kar.sot.test.NewsServiceTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.178 s - in kar.sot.test.NewsServiceTest
