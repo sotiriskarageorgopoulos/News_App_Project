@@ -28,6 +28,8 @@
 	                </li>
                 @endfor
             </ul>
+            @else 
+            	<p class="not-history-paragraph">Nothing has been searched...</p>
             @endif
         </div>
         <div class="col-sm-4"></div>

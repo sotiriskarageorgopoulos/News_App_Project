@@ -2,7 +2,7 @@ package gg.jte.generated.ondemand.history;
 import web.app.controllers.history.SearchHistoryPage;
 public final class Jtesearch_historyGenerated {
 	public static final String JTE_NAME = "history/search_history.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,2,2,2,4,4,4,4,9,9,11,11,13,13,14,14,16,16,19,19,19,20,20,20,21,21,21,22,22,22,22,22,22,22,28,28,30,30,34,34,37,37,40,40,41,41,41,41,41,41,41,41,41,41,41,41,41,41,42,42,44,44,44,45,45,45,46,46,46,46,46,46,46,48,48,50,50,50,52,52,55,55,58,58,60,60,60};
+	public static final int[] JTE_LINE_INFO = {0,0,2,2,2,4,4,4,4,9,9,11,11,13,13,14,14,16,16,19,19,19,20,20,20,21,21,21,22,22,22,22,22,22,22,28,28,30,30,32,32,36,36,39,39,42,42,43,43,43,43,43,43,43,43,43,43,43,43,43,43,44,44,46,46,46,47,47,47,48,48,48,48,48,48,48,50,50,52,52,52,54,54,57,57,60,60,62,62,62};
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, SearchHistoryPage page) {
 		jteOutput.writeContent("\r\n");
 		gg.jte.generated.ondemand.layout.JtebaseGenerated.render(jteOutput, jteHtmlInterceptor, new gg.jte.html.HtmlContent() {
@@ -36,6 +36,8 @@ public final class Jtesearch_historyGenerated {
 						jteOutput.writeContent(" />\r\n\t                        <div class=\"text-center\">\r\n\t                            <button type=\"submit\" class=\"btn btn-sm btn-submit\">Search</button>\r\n\t                        </div>\r\n\t                    </form>\r\n\t                </li>\r\n                ");
 					}
 					jteOutput.writeContent("\r\n            </ul>\r\n            ");
+				} else {
+					jteOutput.writeContent(" \r\n            \t<p class=\"not-history-paragraph\">Nothing has been searched...</p>\r\n            ");
 				}
 				jteOutput.writeContent("\r\n        </div>\r\n        <div class=\"col-sm-4\"></div>\r\n    </div>\r\n    ");
 				if (page.articles != null) {

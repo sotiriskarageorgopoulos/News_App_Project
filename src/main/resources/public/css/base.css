@@ -141,3 +141,14 @@ nav {
     margin-right: auto;
 }
 
+.not-history-paragraph {
+	color: var(--clr-primary-1);
+	font-weight: 700;
+	background-color: var(--clr-grey-7);
+	border: 2px solid var(--clr-primary-1);
+	border-radius: var(--radius);
+	padding: 2%;
+	margin-top: 10%;
+	margin-bottom: 20%;
+}
+
