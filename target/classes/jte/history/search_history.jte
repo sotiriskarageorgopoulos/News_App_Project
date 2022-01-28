@@ -28,7 +28,7 @@
 	                </li>
                 @endfor
             </ul>
-            @else 
+            @elseif(page.history == null && page.articles == null)
             	<p class="not-history-paragraph">Nothing has been searched...</p>
             @endif
         </div>

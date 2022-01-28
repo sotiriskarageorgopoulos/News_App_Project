@@ -36,8 +36,8 @@ public final class Jtesearch_historyGenerated {
 						jteOutput.writeContent(" />\r\n\t                        <div class=\"text-center\">\r\n\t                            <button type=\"submit\" class=\"btn btn-sm btn-submit\">Search</button>\r\n\t                        </div>\r\n\t                    </form>\r\n\t                </li>\r\n                ");
 					}
 					jteOutput.writeContent("\r\n            </ul>\r\n            ");
-				} else {
-					jteOutput.writeContent(" \r\n            \t<p class=\"not-history-paragraph\">Nothing has been searched...</p>\r\n            ");
+				} else if (page.history == null && page.articles == null) {
+					jteOutput.writeContent("\r\n            \t<p class=\"not-history-paragraph\">Nothing has been searched...</p>\r\n            ");
 				}
 				jteOutput.writeContent("\r\n        </div>\r\n        <div class=\"col-sm-4\"></div>\r\n    </div>\r\n    ");
 				if (page.articles != null) {
