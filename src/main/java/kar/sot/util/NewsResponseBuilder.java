@@ -16,8 +16,7 @@ public class NewsResponseBuilder {
 			@Override
 			public LocalDateTime deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
 					throws JsonParseException {
-				LocalDateTime.parse(json.getAsString(), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssz"));
-				return null;
+				return LocalDateTime.parse(json.getAsString(), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssz"));
 			}
 		}).create().fromJson(json, NewsResponse.class);
 	}
