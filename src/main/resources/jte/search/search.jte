@@ -83,7 +83,7 @@
 			                </div>
 			                @if(article.getPublishedAt() != null)
 				                <div class="card-footer text-muted">
-				                  ${article.getPublishedAt().toString()}
+				                   Date: ${article.getPublishedAt().toString().substring(0,10)} Time: ${article.getPublishedAt().toString().substring(11,16)}
 				                </div>
 				            @endif
 			            </div>

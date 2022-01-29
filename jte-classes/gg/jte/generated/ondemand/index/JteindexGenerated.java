@@ -3,7 +3,7 @@ import web.app.controllers.index.IndexPage;
 import kar.sot.util.Article;
 public final class JteindexGenerated {
 	public static final String JTE_NAME = "index/index.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,5,5,5,5,15,15,16,16,16,16,16,16,16,16,16,16,17,17,29,29,30,30,30,30,30,30,30,30,30,30,31,31,42,42,45,45,46,46,46,46,46,46,46,46,46,46,46,46,46,46,47,47,49,49,49,50,50,50,51,51,51,51,51,51,51,53,53,55,55,55,57,57,60,60,63,63,63};
+	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,5,5,5,5,15,15,16,16,16,16,16,16,16,16,16,16,17,17,29,29,30,30,30,30,30,30,30,30,30,30,31,31,42,42,45,45,46,46,46,46,46,46,46,46,46,46,46,46,46,46,47,47,49,49,49,50,50,50,51,51,51,51,51,51,51,53,53,55,55,55,55,55,55,57,57,60,60,63,63,63};
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, IndexPage page) {
 		jteOutput.writeContent("\r\n");
 		gg.jte.generated.ondemand.layout.JtebaseGenerated.render(jteOutput, jteHtmlInterceptor, new gg.jte.html.HtmlContent() {
@@ -71,9 +71,12 @@ public final class JteindexGenerated {
 					}
 					jteOutput.writeContent(" class=\"btn btn-primary\">See more...</a>\r\n                </div>\r\n                ");
 					if (article.getPublishedAt() != null) {
-						jteOutput.writeContent("\r\n                <div class=\"card-footer text-muted\">\r\n                  ");
+						jteOutput.writeContent("\r\n                <div class=\"card-footer text-muted col\">\r\n                  Date: ");
 						jteOutput.setContext("div", null);
-						jteOutput.writeUserContent(article.getPublishedAt().toString());
+						jteOutput.writeUserContent(article.getPublishedAt().toString().substring(0,10));
+						jteOutput.writeContent(" Time: ");
+						jteOutput.setContext("div", null);
+						jteOutput.writeUserContent(article.getPublishedAt().toString().substring(11,16));
 						jteOutput.writeContent("\r\n                </div>\r\n                ");
 					}
 					jteOutput.writeContent("\r\n            </div>\r\n        </div>\r\n        ");
